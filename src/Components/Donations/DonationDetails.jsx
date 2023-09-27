@@ -1,14 +1,16 @@
 
 import { useLoaderData, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { saveDonations } from '../LocalStorag/LocalStorag';
 
 const DonationDetails = () => {
     const donations = useLoaderData()
     const { id } = useParams();
     const parseind = parseInt(id)
-    const donation = donations.find(donation => donation.id === parseind)
-    console.log(donation, id);
+    const donation = donations.find(Donation => Donation.id === parseind)
+    console.log(donation);
     const handleDonate = () => {
+        saveDonations(parseind);
         Swal.fire(
             'Thanks For Donating!',
             'Successfully donated!',
