@@ -13,7 +13,7 @@ const Donations = () => {
     return (
         <div >
             <div className="text-center">
-                <h2 className="text-3xl">Features donations {donations.length}</h2>
+                {/* <h2 className="text-3xl">Features donations {donations.length}</h2> */}
 
             </div>
             <div className="container mx-auto grid grid-cols-1 gap-4  lg:grid lg:grid-cols-4  md:gap-4 md:my-10">
